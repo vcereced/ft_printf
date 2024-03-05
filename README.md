@@ -19,9 +19,9 @@
 </p>
 
 ## &#x1F4CC; Index 
-- [✨ What is ft\_printf?](#-what-is-ft_printf)
-- [💻 Usage](#-usage)
-- [📖 Examples](#-examples)
+- [What is ft\_printf?](#-what-is-ft_printf)
+- [Usage](#-usage)
+- [Examples](#-examples)
 
 ## &#x2728; What is ft_printf?
 
