@@ -19,7 +19,6 @@
 </p>
 
 ## &#x1F4CC; Index 
-- [📌 Index](#-index)
 - [✨ What is ft\_printf?](#-what-is-ft_printf)
 - [💻 Usage](#-usage)
 - [📖 Examples](#-examples)
