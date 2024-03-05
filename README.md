@@ -5,7 +5,7 @@
   </a>
 
   <p align="center">
-    ft_printf <br>
+    Because ft_putnbr() and ft_putstr() aren’t enough <br>
     Project ft_printf of 42 school
     <br />
 	</p>
