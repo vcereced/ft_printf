@@ -1,79 +1,76 @@
-# ft_printf - gmacias-
-En este proyecto recrearemos desde 0 la funcion printf.
 
-### Indice
-* [Que es ft_printf?](#que-es-ft_printf)
-* [Que utilizamos?](#que-utilizamos)
-* [Como funciona?](#como-funciona)
-* [Como utilizamos la libreria?](#como-utilizamos-la-libreria)
+<p align="center">
+  <a>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/42_Logo.svg/1200px-42_Logo.svg.png" alt="Logo" width="200" height="200">
+  </a>
 
-### Que es ft_printf?
-ft_printf es un proyecto de [42][1] donde recreamos el funcionamiento de `printf`.
-En nuestro ft_printf puedes usar las siguientes conversiones:
+  <p align="center">
+    ft_printf <br>
+    Project ft_printf of 42 school
+    <br />
+	</p>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Makefile-8A2BE2">
+  <img src="https://img.shields.io/badge/C-4682B4">
+  <img src="https://img.shields.io/badge/Shell-2E8B57">
+  <img src="https://img.shields.io/badge/Gcc-00FF00">
+</p>
+
+## &#x1F4CC; Index 
+- [📌 Index](#-index)
+- [✨ What is ft\_printf?](#-what-is-ft_printf)
+- [💻 Usage](#-usage)
+- [📖 Examples](#-examples)
+
+## &#x2728; What is ft_printf?
+
+This project recreate the C library printf function.
 
 | Conversión  | Descripción|
 |-------|-----------------------------------------------------------------------------------|
-| **%c** | Imprime un solo carácter.   |
-| **%s** | Imprime una string (como se define por defecto en C).  	|
-| **%p** | El puntero void * dado como argumento se imprime en formato hexadecimal.         |
-| **%d** | Imprime un número decimal (base 10).		|  
-| **%i** | Imprime un entero en base 10.  	|
-| **%u** | Imprime un número decimal (base 10) sin signo.      |
-| **%x** | Imprime un número hexadecimal (base 16) en minúsculas.                				|
-| **%X** | Imprime un número hexadecimal (base 16) en mayúsculas.                				|
-| **%%** | Imprime el símbolo del porcentaje.                 			      |				
+| %c | Print a char.   |
+| **%s** | Print a string literal.  	|
+| **%p** | Print void * pointer in hexadecimal.         |
+| **%d** | Print a int (base 10).		|  
+| **%i** | Print a int (base 10, Base 8, Base 16).  	|
+| **%u** | Print a unsigned int (base 10).      |
+| **%x** | Print hexadecimal in lowercase (base 16).                				|
+| **%X** | Print hexadecimal in uppercase (base 16).                       				|
+| **%%** | Print a '%' char                 			      |				
 
-### Que utilizamos?
-En nuestro ft_printf tenemos solo las siguentes funciones de librerias externas autorizadas:
+## &#x1F4BB; Usage
 
-| Función  | Descripción														 			|
-|-------|-----------------------------------------------------------------------------------|
-| malloc | Solicitar un bloque de memoria del tamaño suministrado como parámetro.     													|
-| free | Desasigna un bloque de memoria que se había asignado previamente mediante una llamada. 											|
-| write | Hace que los bytes que indiques del buffer sean escritos en el file descriptor seleccionado.								|
-| va_start | Permite el acceso a los argumentos de la función variada.														|
-| va_arg | Accede al siguiente argumento de la función variada.               											|
-| va_copy | Hace una copia de los argumentos de la función variádica.               									|
-| va_end | Finaliza el recorrido de los argumentos de la función variada.        |
+`make` to compile .a file.
 
+`exe` to compile .a then compile the executable.
 
-### Como funciona?
+`make clean` remove .o files.
 
-La meta es crear una libreria que contenga todo nuestro codigo para poder utilizarlo en futuros proyectos llamado: *libftprintf.a*
+`make fclean` remove .o file and .a file.
 
-Para crear esta libreria seguimos los siguientes pasos:
+## &#x1F4D6; Examples
 
-	git clone https://github.com/gjmacias/ft_printf
-	cd ft_printf
-	make
+For example, let's create a ``main.c`` file.
 
-Al revisar el directorio, en alguna parte encontraras la libreria: *libftprintf.a*
+```c
+// Include the header
+#include "ft_printf.h"
 
-### Como utilizamos la libreria?
+int main(void)
+{
+      // Call the function
+      ft_printf("This is %d!", 42);
+      return (0);
+}
+```
+Execute this command in the terminal.
 
-Para utilizarlo primero debes de  tener la libreria: *libftprintf.a*.
-Luego debes añadirlo en el compilador, primero la ruta de libftprintf.a y luego el nombre de la libreria
-
-`gcc archivos.c -L<ruta de libftprintf.a> -lftprintf`
-
--L tomara la ubicacion de la libreria<br>
--l tomara el nombre de la libreria. en este caso seran los caracteres que vegan despues de `lib` de tu libreria.
-
-y eso seria todo!
-
-# Quizás pueda interesarte!
-
-### - Para ver mi progresion en 42 🌠
-[AQUÍ](https://github.com/gjmacias/42BCN)
-
-### - Mi perfil de 42 👾
-[AQUÍ](https://profile.intra.42.fr/users/gmacias-)
-
-### - Mis proyectos personales 🧐
-[AQUÍ🗒️](https://github.com/gjmacias/autoproyectos)
-
-# Contacto 📥
-
-◦ Email: gmacias-@student.42barcelona.com
-
-[1]: https://www.42barcelona.com/ "42 BCN"
+```bash
+make exe && ./a.out
+```
+Output should be:
+```
+This is 42!
+```

@@ -13,7 +13,6 @@
 NAME = libftprintf.a
 
 SRC = ft_putstr_printf.c ft_putnbr_printf.c ft_printf.c
-SRCBONUS = 
 
 OBJT = $(SRC:.c=.o)
 
@@ -26,7 +25,6 @@ CC = gcc -c
 all: $(NAME)
 
 $(NAME): $(OBJT)
-#		$(CC) $(CFLAGS) $(SRC) #haria relink
 		ar rcs $(NAME) $(OBJT)
 
 exe: all
@@ -37,9 +35,6 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
-#bonus:
-#	$(CC) $(CFLAGS) $(SRCBONUS)
-#	ar rcs $(NAME) $(OBJTBONUS)
 
 re: fclean all
 
